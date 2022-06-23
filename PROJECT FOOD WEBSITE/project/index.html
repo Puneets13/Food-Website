@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>foodFactory.com</title>
+
+    <!-- to link css style sheet  externally  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- to make website reponsive add the << media query >> here
+    that when the max width increases this then what to do -->
+    <link rel="stylesheet" media="screen and (max-width:1520px)" href="phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo4.jpg" alt="foodFactory.com ">
+        </div>
+        <ul>
+            <!-- mention the ids in href for smooth scrolling for all the particular section -->
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#client-section">Delivery Partners</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">WELCOME TO FOOD-FACTORY</h1>
+        <p>This is the official website for the online food <br> managed and run by <strong>FOOD-FACTORY</strong>
+        </p>
+        <br><br>
+        <!-- to add button to the page -->
+        <buttton class="btn">Order Now</buttton>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="service1.jpg" alt="">
+                <h2 class="h-secondary">Indian cuisine </h2>
+                <p class="center"> 
+               The state, being an agriculture center, is abundant with whole grains, vegetables, and fruits.Common dishes cooked at home are roti with daal and dahi (yogurt) with a side chutney and salad that includes raw onion, tomato, cucumber, etc.
+                </p>
+            </div>
+            <div class="box">
+                <img src="service2.jpg" alt="">
+                <h2 class="h-secondary">Chinese Style</h2>
+                <p class="center">The cuisine's popularity can be attributed to the creation of food with familiar flavours/sensations but prepared in an entirely different way. The versatility of the ingredients meant that Indo-Chinese dishes were easily adapted to the large vegetarian population.
+                </p>
+            </div>
+            <div class="box">
+                <img src="service4.jpg" alt="">
+                <h2 class="h-secondary">Italian cuisine</h2>
+                <p class="center">Italian cuisine consists of traditional meals and ingredients that people consume in Italy.
+                     While pasta, sauces, and cheeses are staples across the country, every region has its own unique ingredients and dishes that have contributed to the influence of Italian cuisine.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="client-section">
+        <h1 class="h-primary">Delivery Partners</h1>
+        <div id="Clients">
+            <div class="client-item">
+                <img src="zomato2.png" alt="FOOD-JUNCTION.COM">
+            </div>
+            <div class="client-item">
+                <img src="swiggy2.png" alt="FOOD-JUNCTION.COM">
+            </div>
+            <div class="client-item">
+                <img src="foodpanda.png" alt="FOOD-JUNCTION.COM">
+            </div>
+            <div class="client-item">
+                <img src="services5.webp" alt="FOOD-JUNCTION.COM">
+            </div>
+
+        </div>
+    </section>
+
+<section id="contact">
+    <h1 class="h-primary">Contact Us</h1>
+<div id="contact-box">
+    <form action="">
+        <div class="form-group">
+            <label for="name">Name : </label>
+             <input type="text" name = "name" id="'name" placeholder="Enter you name">
+             
+        </div>
+        <div class="form-group">
+            <label for="email">Email : </label>
+             <input type="email" name = "name" id="'email" placeholder="Enter you Email">
+             
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone : </label>
+             <input type="phone" name = "name" id="'phone" placeholder="Enter you Phone Number">
+             
+        </div>
+        <div class="form-group">
+            <label for="name">Message : </label>
+              <textarea name="message" id="message" cols="30" rows="10"></textarea>
+             
+        </div>
+    </form>
+</div>
+
+
+</section>
+
+
+<footer>
+    <div class="center">
+        Copyright &copy; www.foodjunction.com  All Rights Reserved !
+    </div>
+</footer>
+
+</body>
+
+</html>

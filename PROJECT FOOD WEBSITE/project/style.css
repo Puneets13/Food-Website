@@ -1,0 +1,290 @@
+
+/* css reset */
+/* to set margin and padding 0 for all elements  */
+
+
+/*  * is used for universal selector  */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* for smooth scrolling we use this and will add link to it  */
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --navbar-height: 59px;
+}
+/* navigation bar */
+
+
+/* since navbar was a id so we represented is with # 
+
+flex is modern display method that is used to arrange the components horizontally in a box*/
+#navbar{
+    display: flex ;
+    align-items: center ;
+    position: sticky;
+    top: 0px;
+}
+/* for adding black background behind the navigation bar 
+z index = -1 is used to bring the backward text in  front  */
+
+/* pseudo selectors */
+#navbar ::before{
+    content: " ";
+    background-color:black;
+    position: absolute;
+    top: 0px;
+    left: 0px;    /*IMPORTANT TO SPECIFY THE LEFT ANF TOP FOR THE SELECTOR */
+    height: 80%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.1;
+}
+#logo{
+  /* height:  34px 57px */
+
+  margin: 10px 34px;
+}
+/* for styling img inside logo */
+/* give somerandom number as height and margin then set that in inspect in the website itself */
+#logo img{
+    height: 36px;
+    margin: 6px 11px;    
+} 
+
+
+/* for styling the navigation bar list  */
+ #navbar ul{
+    display: flex;
+    font-family: 'Tiro Bangla', serif;  
+
+}
+/* for styling the list items of the navigation bar */
+#navbar ul li{
+    color: black;
+    list-style: none;
+    font-size: 1.3rem;
+    font-family: 'Tiro Bangla', serif;  
+    /* 1.3rem is used to set the size according to the root size */
+}
+
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+/* FOR MAKING THE HOVER EFFECT ON NAVIGARTION BAR */
+
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+
+
+/* home section */
+
+#home{
+    display: flex;
+    flex-direction: column ;
+    padding: 3px 200px;
+    height: 584px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* pseudo selectors  TO ADD BACKGROUND IMAGE TO THE WEBSITE  */
+#home ::before{
+
+    content: " ";
+    position: absolute;
+    background: url('bg2.1.jpg') no-repeat center center/cover;
+    top: 0px;
+    left: 0px;    /*IMPORTANT TO SPECIFY THE LEFT ANF TOP FOR THE SELECTOR */
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+/* for styling the font in home section therefore making utility class which can be used foreever in program */
+
+#home h1{
+    color: white;
+    text-align:  center;
+    font-family: 'Roboto Slab', serif;
+}
+
+#home h1:hover{
+    color: rgb(29, 210, 216);
+    text-align:  center;
+    font-family: 'Roboto Slab', serif;
+}
+
+#home p{
+    color: white;
+    text-align:  center;
+    font-size: 1.8rem;
+    font-family: 'Tiro Bangla', serif;
+}
+/* utitlity classes 
+to apply over different containter */
+.h-primary{
+    font-size: 2.8rem ;
+    padding: 83px ;
+    text-align: center;
+    font-family: 'Tiro Bangla', serif;
+
+      
+}
+.h-secondary{
+    font-size: 1.5rem ;
+    padding: 12px ;
+    text-align: center;
+    font-family: 'Tiro Bangla', serif;
+
+      
+}
+
+
+#home .btn {
+    padding: 7px 20px;
+    border-radius: 52px;
+    border: 5px solid black;
+    background-color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    font-style: inherit;
+    color: black;
+  /* to change the cursor to pointer when it hover over the button */
+    cursor: pointer;
+}
+#home .btn:hover {
+    padding: 7px 20px;
+    border-radius: 52px;
+    z-index: -1;
+    /* border: 5px solid rgb(210, 107, 9); */
+    background-color: rgb(128, 127, 127);
+    font-size: 2.5rem;
+    font-style: 'Tiro Bangla', serif;
+    color: black;
+  /* to change the cursor to pointer when it hover over the button */
+    cursor: pointer;
+}
+
+
+#services{
+    margin: 34px;
+    display: flex;
+}
+#services .box{ 
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 2px 7px;
+    /* to adjust the width between two boxes === use margin */
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#services .box img{ 
+   height: 160px;
+   margin: auto;
+   display: block;
+}
+
+#services .box p{
+    font-family: 'Roboto Slab', serif;
+
+} 
+/* #client-section */
+
+#client-section{
+position: relative;
+}
+#client-section ::before{
+    content: "";
+    position: absolute;
+    background: url(delivery1.jpg)no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1 ;
+    left: 0%;
+top: 0%;
+/* top = 0% is necessary otherwise we will get the image repeated with each content */
+    }
+
+#Clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.client-item{
+padding: 115px;
+overflow: hidden;
+}
+#Clients img {
+height: 135px;
+}
+
+/* contact section  */
+
+#contact{
+    position: relative;
+    /* to hidde the scroolbar */
+    overflow: hidden;
+}
+
+#contact ::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    top: 0%;
+    left: 0%;
+
+background: url(contact.jpg)no-repeat center center/cover;
+}
+
+#contact-box{
+    display: flex;
+    justify-content: center;
+align-items: center;
+padding-bottom: 34px; 
+}
+
+#contact-box form{
+    width: 40% ;
+}
+
+#contact-box label{
+    font-size: 1.3rem ;
+    font-family: 'Roboto Slab', serif;
+
+}
+#contact-box textarea{
+    width: 100%;
+    padding:0.5rem ;
+    border-radius: 9px;
+font-size: 1.1rem;
+ }
+
+
+footer{
+ background: darkgray;
+ color: white;
+ padding: 9px ;  
+ text-align: center; 
+}
